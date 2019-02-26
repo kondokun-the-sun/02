@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>02</title>
+    <meta name="keywords" content="アジアン,エスニック,ゴア,雑貨,通販,楽天,"/>
+    <meta name="description"
+          content=""/>
+    
+    <!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+	<!-- Bootstrap core CSS -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Material Design Bootstrap -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.1/css/mdb.min.css" rel="stylesheet">		
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="css/cnt.css?1">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118285051-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-118285051-2');
+    </script>
+    
+    <!-- ADOBE FONTS -->
+    <script>
+      (function(d) {
+        var config = {
+          kitId: 'fkn0nhe',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
+ 
+</head>
+<body class="cnbg">    
+<!-- head -->
+<div class="container-fluid headbg3 z-depth-1" id="navber">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-xl-6"><img src="images/kanban.png" width="100%"></div>
+    </div>
+</div>
+    
+<div id="scv">
+<!--Navbar -->
+    <nav class="mb-1 navbar navbar-expand-lg navbar-dark  sticky-top" v-if="preitems.length  > 1 ">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent-333" id="Navber">
+            <ul class="navbar-nav mr-auto mx-auto"  v-for="(preitem ,index) in preitems">
+                <li class="nav-item">
+                    <a class="nav-link"  v-bind:href="'#'+index">{{preitem.title}}</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--/.Navbar -->
+
+    <!-- content -->
+    <div class="container mb-5">
+        <div class="row mt-4 text-center justify-content-center text-center" v-for="(preitem ,index) in preitems">
+            <!--subhead-->
+            <div class="col-12 mt-1">
+                <div v-bind:id="index"  v-if="preitems.length  > 1 " ><h1>{{preitem.title}}</h1></div >
+            </div>
+            <!--card-->
+            <div class="col-12 col-md-6 col-lg-5 col-xl-4 mb-3" v-for="postitem in preitem.postitems">
+                <div class="card shadow">
+                <div class="p-2"><img class="card-img-top rounded lazyload"  v-bind:data-src="postitem.picurl" alt="Card image cap"></div>
+                <div class="price mt-3 mx-4">{{postitem.title}}</div>
+                <div class="price h3  mt-1 mb-3">￥{{postitem.price}}</div>
+                <a v-bind:href=" postitem.itemurl" class="btn  mx-4 mb-3 cardbtn" >購入はこちら </a>
+                </div>
+            </div>
+        </div>
+        <!--cardend-->
+    </div>`
+    
+</div>
+    
+<!-- banner -->
+<id id="bannerapp">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-12 col-md-8"><img v-bind:src="../banners/pics/freepostage.png" width="100%" alt=""></div>
+        </div>    
+    </div>
+</id>
+<!-- /banner -->
+
+    
+<!-- footer btn-->
+<div class="container mb-5">
+    <div class="row justify-content-center">
+        <div class="col-10 text-center"><a href="https://www.rakuten.ne.jp/gold/asiangoa/" class="btn  btn-block my-3 p-3 cardbtn">トップへ戻る</a></div>
+    </div>    
+</div>
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.1/js/mdb.min.js"></script>
+
+<!-- vue-cdn -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script type="text/javascript" src="../../js/popper.min.js"></script>
+<script type="text/javascript" src="js/scv.js"></script>
+<script type="text/javascript" src="../banners/banner.js"></script>
+<!-- SCRIPTS -->
+<script src="../../js/lazysizes.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/12.1.5/js/smooth-scroll.min.js"></script> 
+<script type="text/javascript" src="../../js/main.js"></script>
+<script type="text/javascript" src="js/cnt.js?1"></script>
+</body>
+
+</html>
